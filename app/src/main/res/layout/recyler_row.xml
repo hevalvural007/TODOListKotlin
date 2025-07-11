@@ -15,7 +15,6 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-        <!-- Başlık -->
         <TextView
             android:id="@+id/todoTitleTextView"
             android:layout_width="match_parent"
@@ -24,16 +23,6 @@
             android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="#212121" />
-
-        <!-- Açıklama -->
-        <TextView
-            android:id="@+id/todoDescriptionTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Açıklama"
-            android:textSize="15sp"
-            android:textColor="#757575"
-            android:layout_marginTop="4dp" />
 
     </LinearLayout>
 
