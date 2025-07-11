@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddNoteActivity"
+    >
+
+    <!-- Sarı üst bar -->
+    <View
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#FFC107" />
+
+
+    <EditText
+        android:id="@+id/titleEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topBar"
+        android:layout_margin="16dp"
+        android:hint="Header"
+        android:textSize="18sp"
+        android:background="@android:drawable/edit_text"
+        android:padding="12dp" />
+
+    <!-- Açıklama EditText -->
+    <EditText
+        android:id="@+id/descriptionEditText"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@id/titleEditText"
+        android:layout_margin="16dp"
+        android:hint="Explanation"
+        android:textSize="16sp"
+        android:gravity="top"
+        android:background="@android:drawable/edit_text"
+        android:padding="12dp" />
+
+    <!-- Kaydet Butonu -->
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/descriptionEditText"
+        android:layout_margin="16dp"
+        android:text="Save"
+        android:backgroundTint="#FFC107"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:elevation="4dp" />
+
+</RelativeLayout>
