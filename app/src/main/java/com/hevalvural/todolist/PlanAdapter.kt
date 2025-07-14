@@ -16,20 +16,25 @@ class PlanAdapter(val planList : ArrayList<Plan>) : RecyclerView.Adapter<PlanAda
         return PlanHolder(binding)
     }
 
-    override fun onBindViewHolder(
-        holder: PlanHolder,
-        position: Int
-    ) {
-        holder.binding.todoTitleTextView.text = planList[position].title
+    override fun onBindViewHolder(holder: PlanHolder, position: Int) {
+        val plan = planList[position]
+        holder.binding.todoTitleTextView.text = plan.title
+
         holder.itemView.setOnClickListener {
-            val intent = Intent(holder.itemView.context, AddNoteActivity::class.java)
+            val intent = Intent(holder.itemView.context, DetailsActivity::class.java)
+            intent.putExtra("planId", plan.id)
+            intent.putExtra("planTitle", plan.title)
+            intent.putExtra("planDescription", plan.description)
             holder.itemView.context.startActivity(intent)
         }
     }
 
+
     override fun getItemCount(): Int {
         return planList.size
     }
+
+
 
     class PlanHolder(val binding: RecylerRowBinding) : RecyclerView.ViewHolder(binding.root){
 

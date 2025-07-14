@@ -45,11 +45,13 @@ class MainActivity : AppCompatActivity() {
         val cursor = database.rawQuery("SELECT * FROM plans",null)
         val idIx = cursor.getColumnIndex("id")
         val titleIx = cursor.getColumnIndex("title")
+        val descriptionIx = cursor.getColumnIndex("description")
 
         while (cursor.moveToNext()){
             val title = cursor.getString(titleIx)
             val id = cursor.getInt(idIx)
-            val plan = Plan(title,id)
+            val description = cursor.getString(descriptionIx)
+            val plan = Plan(title,id,description)
             planList.add(plan)
         }
 

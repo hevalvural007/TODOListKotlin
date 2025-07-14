@@ -1,4 +1,4 @@
 package com.hevalvural.todolist
 
-class Plan(val title: String, val id: Int) {
+class Plan(val title: String, val id: Int, val description : String) {
 }

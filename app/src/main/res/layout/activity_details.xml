@@ -5,8 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddNoteActivity"
-    >
+    tools:context=".AddNoteActivity">
 
     <!-- Sarı üst bar -->
     <View
@@ -14,7 +13,6 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="#FFC107" />
-
 
     <EditText
         android:id="@+id/titleEditText"
@@ -27,7 +25,6 @@
         android:background="@android:drawable/edit_text"
         android:padding="12dp" />
 
-    <!-- Açıklama EditText -->
     <EditText
         android:id="@+id/descriptionEditText"
         android:layout_width="match_parent"
@@ -40,7 +37,6 @@
         android:background="@android:drawable/edit_text"
         android:padding="12dp" />
 
-    <!-- Kaydet Butonu -->
     <Button
         android:id="@+id/saveAgain"
         android:layout_width="match_parent"
@@ -49,8 +45,21 @@
         android:layout_margin="16dp"
         android:backgroundTint="#FFC107"
         android:elevation="4dp"
-        android:onClick="saveButton"
+        android:onClick="saveAgain"
         android:text="Save"
+        android:textColor="@android:color/black"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/deleteButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/saveAgain"
+        android:layout_margin="16dp"
+        android:backgroundTint="#FFC107"
+        android:elevation="4dp"
+        android:onClick="deleteButton"
+        android:text="Delete"
         android:textColor="@android:color/black"
         android:textStyle="bold" />
 
